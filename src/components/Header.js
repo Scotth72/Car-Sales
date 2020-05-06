@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 
 const Header = props => {
   return (
@@ -12,4 +14,11 @@ const Header = props => {
   );
 };
 
-export default Header;
+
+const mapToStateProps = state => {
+  return {
+    car: state.car
+
+  }
+}
+export default  connect(mapToStateProps, {})(Header);
